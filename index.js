@@ -9,7 +9,12 @@
 // This exercise is designed as an introduction to higher order functions (functions which use other functions to do their work).
 
 function whichIsLarger(f, g) {
-	
+    let answer = 'neither'
+    f = f()
+    g = g()
+    g > f ? answer = 'g' : null
+    f > g ? answer = "f" : null
+    return answer
 } 
 
 console.log(whichIsLarger(()=>5, ()=>10),'g')
